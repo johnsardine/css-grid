@@ -2,27 +2,52 @@
 * SDN Framework: Grid
 * 
 * Grid classes with responsive conditions
+*
+* .cf - Micro Clearfix by Nicholas Gallager http://nicolasgallagher.com/micro-clearfix-hack/
+*
+* .row - container for columns, columns should always be placed inside a .row
+*
+* .row-inverted or .row-flip
+*	- Represents an inverted row
+*	- In an inverted row, the first element on the DOM will start from the right,
+*	where in a normal row, it starts from the left
+*
+* .col-* - Column, the number represents the width of the column (1 to 12)
+*
+* .m-col-* - Apply to medium resolution screens
+* .s-col-* - Apply to small resolution screens
+*
+* .*-hidden - Hidden on the specified size (l, m, and s)
+* .*-visible - Visible on the specified size (l, m, and s)
+*
+* Examples
+*
+* class="col-5" - Column with 5 out of 12 width
+* class="col-3 m-col-6 s-col-12" - Column 5 on normal screens, column 6 on medium screens and column 12 on small screens
+* class="s-hidden" - Hidden only in small resolution screens
+* class="l-visible" - Visible only on large/normal resolution screens
+*
 */
 
-// Grid width (960) + 1 gutter
-@gridRefWidth: 972; // 16 - 976 / 12 - 972
-@gridRefGutter: 22; // 16 - 16 / 12 - 12
-@gridRefColumn: 59; // 16 - 45 / 12 - 69
-@gridColumns: 12; // 16 - 16 / 12 - 12
+// Grid width (960) + (1 * gutter)
+@gridRefWidth:			972; // 16 - 976 / 12 - 972
+@gridRefGutter:			22; // 16 - 16 / 12 - 12
+@gridRefColumn:			59; // 16 - 45 / 12 - 69
+@gridColumns:			12; // 16 - 16 / 12 - 12
 
 //@gridRefColumnWidth: (@gridRefWidth + @gridRefGutter) / @gridColumns;
-@gridRefColumnWidth: @gridRefColumn + @gridRefGutter;
+@gridRefColumnWidth:	@gridRefColumn + @gridRefGutter;
 
 //@gridWidth: @gridRefWidth;
 //@gridGutter: @gridRefGutter;
 //@gridColumnWidth: @gridRefColumnWidth;
 
-@gridWidth: 100;
-@gridGutter: (@gridRefGutter * @gridWidth) / @gridRefWidth;
-@gridColumnWidth: (@gridRefColumnWidth * @gridWidth) / @gridRefWidth;
+@gridWidth:				100;
+@gridGutter:			(@gridRefGutter * @gridWidth) / @gridRefWidth;
+@gridColumnWidth:		(@gridRefColumnWidth * @gridWidth) / @gridRefWidth;
 
 //@gridUnit: 1px;
-@gridUnit: 1%;
+@gridUnit:				1%;
 
 // Calculate column width
 .column(@column) {
@@ -30,11 +55,11 @@
 }
 
 // Breakpoints
-@small: 480px;
-@smallMax: (@small - 1);
+@small:					480px;
+@smallMax:				(@small - 1);
 
-@medium: 800px; // 768px ??
-@mediumMax: (@medium - 1);
+@medium:				800px; // 768px ??
+@mediumMax:				(@medium - 1);
 
 //Clearfixing Elements
 .cf {
