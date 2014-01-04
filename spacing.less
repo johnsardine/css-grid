@@ -26,9 +26,11 @@
 * class="pb-double" - padding-bottom: 40px;
 * class="m-mt-half" - margin-top: 10px; // only applies to devices within the medium size screen
 *
+* You must define the following variables with values of your choosing
+*
+* @spacingRefValue: 20px; // Defines the spacing value that will be used across the spacing classes
+*
 */
-
-@spacingRefValue:	20px;
 
 /*
 * Margins
@@ -91,7 +93,7 @@
 }
 
 // Medium screen
-@media only screen and (max-width: @mediumMax) {
+@media only screen and (max-width: @gridViewportMediumMax) {
 	.m-m {
 		// Top
 		&t {
@@ -149,7 +151,7 @@
 }
 
 // Small screen
-@media only screen and (max-width: @smallMax) {
+@media only screen and (max-width: @gridViewportSmallMax) {
 	.s-m {
 		// Top
 		&t {
@@ -267,7 +269,7 @@
 }
 
 // Medium screen
-@media only screen and (max-width: @mediumMax) {
+@media only screen and (max-width: @gridViewportMediumMax) {
 	.m-p {
 		// Top
 		&t {
@@ -325,7 +327,7 @@
 }
 
 // Small screen
-@media only screen and (max-width: @smallMax) {
+@media only screen and (max-width: @gridViewportSmallMax) {
 	.s-p {
 		// Top
 		&t {

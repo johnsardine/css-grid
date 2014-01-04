@@ -27,13 +27,19 @@
 * class="s-hidden" - Hidden only in small resolution screens
 * class="l-visible" - Visible only on large/normal resolution screens
 *
+* You must define the following variables with values of your choosing
+*
+* @gridRefWidth:		972;	// 16 - 976 / 12 - 972
+* @gridRefGutter:		22;		// 16 - 16 / 12 - 12
+* @gridRefColumn:		59;		// 16 - 45 / 12 - 69
+* @gridColumns:			12;		// 16 - 16 / 12 - 12
+*
+* @gridViewportSmall:	480px;
+* @gridViewportMedium:	800px; // 768px ??
+*
 */
 
 // Grid width (960) + (1 * gutter)
-@gridRefWidth:			972; // 16 - 976 / 12 - 972
-@gridRefGutter:			22; // 16 - 16 / 12 - 12
-@gridRefColumn:			59; // 16 - 45 / 12 - 69
-@gridColumns:			12; // 16 - 16 / 12 - 12
 
 //@gridRefColumnWidth: (@gridRefWidth + @gridRefGutter) / @gridColumns;
 @gridRefColumnWidth:	@gridRefColumn + @gridRefGutter;
@@ -55,11 +61,11 @@
 }
 
 // Breakpoints
-@small:					480px;
-@smallMax:				(@small - 1);
+//@gridViewportSmall:		480px;
+@gridViewportSmallMax:	(@gridViewportSmall - 1);
 
-@medium:				800px; // 768px ??
-@mediumMax:				(@medium - 1);
+//@gridViewportMedium:	800px; // 768px ??
+@gridViewportMediumMax:	(@gridViewportMedium - 1);
 
 //Clearfixing Elements
 .cf {
@@ -167,7 +173,7 @@ ul {
 	background-color: rgba(0,0,0,0.05);
 }
 
-@media only screen and (max-width: @mediumMax) {
+@media only screen and (max-width: @gridViewportMediumMax) {
 
 	//.tablet-column,
 	//.medium-column,
@@ -189,7 +195,7 @@ ul {
 	}
 }
 
-@media only screen and (max-width: @smallMax) {
+@media only screen and (max-width: @gridViewportSmallMax) {
 
 	//.mobile-column,
 	//.small-column,
@@ -212,7 +218,7 @@ ul {
 }
 
 // Large only
-@media only screen and (min-width: @medium) {
+@media only screen and (min-width: @gridViewportMedium) {
 
 	.s,
 	.m {
@@ -250,7 +256,7 @@ ul {
 }
 
 // Medium only
-@media only screen and (min-width: @small) and (max-width: @mediumMax) {
+@media only screen and (min-width: @gridViewportSmall) and (max-width: @gridViewportMediumMax) {
 
 	.s {
 		&-visible {
@@ -286,7 +292,7 @@ ul {
 }
 
 // Small only
-@media only screen and (min-width: 0px) and (max-width: @smallMax) {
+@media only screen and (min-width: 0px) and (max-width: @gridViewportSmallMax) {
 
 	.s {
 		&-hidden {
