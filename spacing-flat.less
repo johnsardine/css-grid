@@ -1,0 +1,433 @@
+/*
+* SDN Framework: Spacing
+*
+* Spacing classes with responsive conditions
+*
+* .mt-* - Margin Top
+* .mr-* - Margin Right
+* .mb-* - Margin Bottom
+* .ml-* - Margin Left
+*
+* .pt-* - Padding Top
+* .pr-* - Padding Right
+* .pb-* - Padding Bottom
+* .pl-* - Padding Left
+*
+* .*-half - Half the reference value
+* .*-double - Double the reference value
+* .*-none - 0 margin
+*
+* .m-* - Apply to medium resolution screens
+* .s-* - Apply to small resolution screens
+*
+* Examples based on 20px reference value
+*
+* class="mt" - margin-top: 20px;
+* class="pb-double" - padding-bottom: 40px;
+* class="m-mt-half" - margin-top: 10px; // only applies to devices within the medium size screen
+*
+* You must define the following variables with values of your choosing
+*
+* @spacingRefValue: 20px; // Defines the spacing value that will be used across the spacing classes
+*
+*/
+
+/*
+* Margins
+*/
+
+/* Normal screen */
+
+// Top
+.mt {
+	margin-top: @spacingRefValue;
+}
+.mt-half {
+	margin-top: round(@spacingRefValue / 2);
+}
+.mt-double {
+	margin-top: round(@spacingRefValue * 2);
+}
+.mt-none {
+	margin-top: 0;
+}
+
+// Right
+.mr {
+	margin-right: @spacingRefValue;
+}
+.mr-half {
+	margin-right: round(@spacingRefValue / 2);
+}
+.mr-double {
+	margin-right: round(@spacingRefValue * 2);
+}
+.mr-none {
+	margin-right: 0;
+}
+
+// Bottom
+.mb {
+	margin-bottom: @spacingRefValue;
+}
+.mb-half {
+	margin-bottom: round(@spacingRefValue / 2);
+}
+.mb-double {
+	margin-bottom: round(@spacingRefValue * 2);
+}
+.mb-none {
+	margin-bottom: 0;
+}
+
+// Left
+.ml {
+	margin-left: @spacingRefValue;
+}
+.ml-half {
+	margin-left: round(@spacingRefValue / 2);
+}
+.ml-double {
+	margin-left: round(@spacingRefValue * 2);
+}
+.ml-none {
+	margin-left: 0;
+}
+
+
+// Medium screen
+@media only screen and (max-width: @gridViewportMediumMax) {
+
+	// Top
+	.m-mt {
+		margin-top: @spacingRefValue;
+	}
+	.m-mt-half {
+		margin-top: round(@spacingRefValue / 2);
+	}
+	.m-mt-double {
+		margin-top: round(@spacingRefValue * 2);
+	}
+	.m-mt-none {
+		margin-top: 0;
+	}
+
+	// Right
+	.m-mr {
+		margin-right: @spacingRefValue;
+	}
+	.m-mr-half {
+		margin-right: round(@spacingRefValue / 2);
+	}
+	.m-mr-double {
+		margin-right: round(@spacingRefValue * 2);
+	}
+	.m-mr-none {
+		margin-right: 0;
+	}
+
+	// Bottom
+	.m-mb {
+		margin-bottom: @spacingRefValue;
+	}
+	.m-mb-half {
+		margin-bottom: round(@spacingRefValue / 2);
+	}
+	.m-mb-double {
+		margin-bottom: round(@spacingRefValue * 2);
+	}
+	.m-mb-none {
+		margin-bottom: 0;
+	}
+
+	// Left
+	.m-ml {
+		margin-left: @spacingRefValue;
+	}
+	.m-ml-half {
+		margin-left: round(@spacingRefValue / 2);
+	}
+	.m-ml-double {
+		margin-left: round(@spacingRefValue * 2);
+	}
+	.m-ml-none {
+		margin-left: 0;
+	}
+
+}
+
+// Small screen
+@media only screen and (max-width: @gridViewportSmallMax) {
+
+	// Top
+	.s-mt {
+		margin-top: @spacingRefValue;
+	}
+	.s-mt-half {
+		margin-top: round(@spacingRefValue / 2);
+	}
+	.s-mt-double {
+		margin-top: round(@spacingRefValue * 2);
+	}
+	.s-mt-none {
+		margin-top: 0;
+	}
+
+	// Right
+	.s-mr {
+		margin-right: @spacingRefValue;
+	}
+	.s-mr-half {
+		margin-right: round(@spacingRefValue / 2);
+	}
+	.s-mr-double {
+		margin-right: round(@spacingRefValue * 2);
+	}
+	.s-mr-none {
+		margin-right: 0;
+	}
+
+	// Bottom
+	.s-mb {
+		margin-bottom: @spacingRefValue;
+	}
+	.s-mb-half {
+		margin-bottom: round(@spacingRefValue / 2);
+	}
+	.s-mb-double {
+		margin-bottom: round(@spacingRefValue * 2);
+	}
+	.s-mb-none {
+		margin-bottom: 0;
+	}
+
+	// Left
+	.s-ml {
+		margin-left: @spacingRefValue;
+	}
+	.s-ml-half {
+		margin-left: round(@spacingRefValue / 2);
+	}
+	.s-ml-double {
+		margin-left: round(@spacingRefValue * 2);
+	}
+	.s-ml-none {
+		margin-left: 0;
+	}
+}
+
+/*
+* Paddings
+*/
+
+/* Normal screen */
+
+// Top
+.pt {
+	padding-top: @spacingRefValue;
+}
+.pt-half {
+	padding-top: round(@spacingRefValue / 2);
+}
+.pt-double {
+	padding-top: round(@spacingRefValue * 2);
+}
+.pt-none {
+	padding-top: 0;
+}
+
+// Right
+.pr {
+	padding-right: @spacingRefValue;
+}
+.pr-half {
+	padding-right: round(@spacingRefValue / 2);
+}
+.pr-double {
+	padding-right: round(@spacingRefValue * 2);
+}
+.pr-none {
+	padding-right: 0;
+}
+
+// Bottom
+.pb {
+	padding-bottom: @spacingRefValue;
+}
+.pb-half {
+	padding-bottom: round(@spacingRefValue / 2);
+}
+.pb-double {
+	padding-bottom: round(@spacingRefValue * 2);
+}
+.pb-none {
+	padding-bottom: 0;
+}
+
+// Left
+.pl {
+	padding-left: @spacingRefValue;
+}
+.pl-half {
+	padding-left: round(@spacingRefValue / 2);
+}
+.pl-double {
+	padding-left: round(@spacingRefValue * 2);
+}
+.pl-none {
+	padding-left: 0;
+}
+
+
+// Medium screen
+@media only screen and (max-width: @gridViewportMediumMax) {
+
+	// Top
+	.m-pt {
+		padding-top: @spacingRefValue;
+	}
+	.m-pt-half {
+		padding-top: round(@spacingRefValue / 2);
+	}
+	.m-pt-double {
+		padding-top: round(@spacingRefValue * 2);
+	}
+	.m-pt-none {
+		padding-top: 0;
+	}
+
+	// Right
+	.m-pr {
+		padding-right: @spacingRefValue;
+	}
+	.m-pr-half {
+		padding-right: round(@spacingRefValue / 2);
+	}
+	.m-pr-double {
+		padding-right: round(@spacingRefValue * 2);
+	}
+	.m-pr-none {
+		padding-right: 0;
+	}
+
+	// Bottom
+	.m-pb {
+		padding-bottom: @spacingRefValue;
+	}
+	.m-pb-half {
+		padding-bottom: round(@spacingRefValue / 2);
+	}
+	.m-pb-double {
+		padding-bottom: round(@spacingRefValue * 2);
+	}
+	.m-pb-none {
+		padding-bottom: 0;
+	}
+
+	// Left
+	.m-pl {
+		padding-left: @spacingRefValue;
+	}
+	.m-pl-half {
+		padding-left: round(@spacingRefValue / 2);
+	}
+	.m-pl-double {
+		padding-left: round(@spacingRefValue * 2);
+	}
+	.m-pl-none {
+		padding-left: 0;
+	}
+
+}
+
+// Small screen
+@media only screen and (max-width: @gridViewportSmallMax) {
+}
+
+// Top
+.s-pt {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-top: @spacingRefValue;
+	}
+}
+.s-pt-half {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-top: round(@spacingRefValue / 2);
+	   }
+}
+.s-pt-double {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-top: round(@spacingRefValue * 2);
+	}
+}
+.s-pt-none {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-top: 0;
+	}
+}
+
+// Right
+.s-pr {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-right: @spacingRefValue;
+	}
+}
+.s-pr-half {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-right: round(@spacingRefValue / 2);
+	}
+}
+.s-pr-double {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-right: round(@spacingRefValue * 2);
+	}
+}
+.s-pr-none {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-right: 0;
+	}
+}
+
+// Bottom
+.s-pb {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-bottom: @spacingRefValue;
+	}
+}
+.s-pb-half {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-bottom: round(@spacingRefValue / 2);
+	}
+}
+.s-pb-double {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-bottom: round(@spacingRefValue * 2);
+	}
+}
+.s-pb-none {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-bottom: 0;
+	}
+}
+
+// Left
+.s-pl {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-left: @spacingRefValue;
+	}
+}
+.s-pl-half {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-left: round(@spacingRefValue / 2);
+	}
+}
+.s-pl-double {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-left: round(@spacingRefValue * 2);
+	}
+}
+.s-pl-none {
+	@media only screen and (max-width: @gridViewportSmallMax) {
+		padding-left: 0;
+	}
+}
