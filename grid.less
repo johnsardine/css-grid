@@ -33,6 +33,7 @@
 * @gridRefGutter:		22;		// 16 - 16 / 12 - 12
 * @gridRefColumn:		59;		// 16 - 45 / 12 - 69
 * @gridColumns:			12;		// 16 - 16 / 12 - 12
+* @gridContainerWidth:	960px;	// 960px
 *
 * @gridViewportSmall:	480px;
 * @gridViewportMedium:	800px; // 768px ??
@@ -81,7 +82,7 @@
 }
 
 .container {
-	max-width: 960px;
+	max-width: @gridContainerWidth;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -126,7 +127,7 @@
 }
 
 .row {
-	.cf;
+	&:extend(.cf all);
 //	position: relative;
 //	overflow: hidden;
 	margin-left: @gridGutter * -@gridUnit;
@@ -134,7 +135,7 @@
 }
 .row-inverted,
 .row-flip {
-	.cf;
+	&:extend(.cf all);
 	margin-right: @gridGutter * -@gridUnit;
 	width: (@gridWidth + @gridGutter) * @gridUnit;
 
