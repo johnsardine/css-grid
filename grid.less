@@ -60,6 +60,9 @@
 .column(@column) {
 	width: ((@gridColumnWidth * @column) - @gridGutter) * @gridUnit;
 }
+.columnPX(@column) {
+	width: (@column * @gridContainerWidth) / @gridColumns;
+}
 
 // Breakpoints
 //@gridViewportSmall:		480px;
@@ -106,6 +109,24 @@
 }
 
 //.column,
+.container.col {
+
+	&-1   { .columnPX(1); }
+	&-2   { .columnPX(2); }
+	&-3   { .columnPX(3); }
+	&-4   { .columnPX(4); }
+	&-5   { .columnPX(5); }
+	&-6   { .columnPX(6); }
+	&-7   { .columnPX(7); }
+	&-8   { .columnPX(8); }
+	&-9   { .columnPX(9); }
+	&-10  { .columnPX(10); }
+	&-11  { .columnPX(11); }
+	&-12  { .columnPX(12); }
+
+}
+
+//.column,
 .col {
 
 	&-1,
@@ -123,6 +144,11 @@
 		float: left;
 		position: relative;
 		margin-left: @gridGutter * @gridUnit;
+
+		&.container {
+			float: none;
+			margin-left: auto;
+		}
 	}
 }
 
