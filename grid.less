@@ -61,7 +61,7 @@
 	width: ((@gridColumnWidth * @column) - @gridGutter) * @gridUnit;
 }
 .columnPX(@column) {
-	width: (@column * @gridContainerWidth) / @gridColumns;
+	max-width: (@column * @gridContainerWidth) / @gridColumns;
 }
 
 // Breakpoints
